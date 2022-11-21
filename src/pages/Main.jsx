@@ -22,11 +22,12 @@ export default function Main() {
     }, [])
     
     const handleSearch = (value) => {
-        if (value === '') {
+        let correctValue = value.toLowerCase()
+        if (correctValue === '') {
             setAmiibosSearch(amiibos)
         } else {
         let searchedAmiibos = amiibos.filter((amiibo) => {
-          return (amiibo.name.toLowerCase().includes(value))
+          return (amiibo.name.toLowerCase().includes(correctValue))
         })
         setAmiibosSearch(searchedAmiibos)
         }

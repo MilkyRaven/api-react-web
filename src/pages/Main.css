@@ -3,9 +3,11 @@
     padding: 0;
 }
 .amiibo-list-container{
-    display: flex;
-    flex-flow: row wrap;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 40px;
 }
 .amiibo-card {
     display: flex;

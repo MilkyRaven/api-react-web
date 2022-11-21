@@ -5,8 +5,8 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4em;
     font-weight:800;
-    margin-top: 70px;
-    margin-bottom: 130px;
+    margin-top: 20px;
+    margin-bottom: 120px;
 }
 .home-container {
     display: flex;
@@ -17,7 +17,7 @@ h1 {
     width: 500px;
 }
 .purple-btn {
-    background-color: #3101FF;
+    background-color: #7d36f2;
     color: white;
     border-style: none;
     width: 200px;

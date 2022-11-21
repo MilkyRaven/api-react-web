@@ -36,7 +36,6 @@ export default function Main() {
     return (
         <div>
             {/* {console.log(amiibos)} */}
-            <h2>Amiibo List</h2>
             <Search onSearch={handleSearch}></Search>
             <div className='amiibo-list-container'>
                 {!amiibosSearch && <h1>Loading...</h1>}

@@ -13,5 +13,6 @@ export default function Home() {
         </div>
             <img className='gba' src="/img/gba.png" alt="" />
     </div>
+
   )
 }

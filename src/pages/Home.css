@@ -1,0 +1,38 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    font-weight:800;
+    margin-top: 70px;
+    margin-bottom: 130px;
+}
+.home-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.gba {
+    width: 500px;
+}
+.purple-btn {
+    background-color: #3101FF;
+    color: white;
+    border-style: none;
+    width: 200px;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+
+}
+.text-container {
+    display: flex;
+    flex-flow: column;
+    width: 50vw;
+    padding: 20px;
+    text-align: left;
+}
+.description-container {
+    margin: 0;
+}

@@ -16,6 +16,7 @@ export default function Main() {
             const res = await axios.get(apiEndpoint)
             setAmiibos(res.data.amiibo)
             setAmiibosSearch(res.data.amiibo)
+            console.log(amiibosSearch)
 
         }
         apiCall()
@@ -39,6 +40,7 @@ export default function Main() {
             <h2>Amiibo List</h2>
             <Search onSearch={handleSearch}></Search>
             <div className='amiibo-list-container'>
+                {!amiibosSearch && <h1>Loading...</h1>}
                 { amiibosSearch && amiibosSearch.map((amiibo) => {
                     return (
                         <div className='amiibo-card'>

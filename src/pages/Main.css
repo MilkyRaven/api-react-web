@@ -1,0 +1,24 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.amiibo-list-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 40px;
+}
+.amiibo-card {
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.img-container {
+    width: 100px;
+}
+.amiibo-img {
+    width: 70px;
+}

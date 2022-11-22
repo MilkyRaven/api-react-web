@@ -1,9 +1,10 @@
-import './Main.css'
+import '../styles/Main.css'
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 //import {Link} from "react-router-dom";
 import Search from '../components/Search';
+import Loading from '../components/Loading';
 
 const apiEndpoint = "https://www.amiiboapi.com/api/amiibo";
 
@@ -34,24 +35,29 @@ export default function Main() {
       }
 
     return (
-        <div>
-            {/* {console.log(amiibos)} */}
-            <h2>Amiibo List</h2>
+        <>
+           {/* {console.log(amiibos)}*/}
             <Search onSearch={handleSearch}></Search>
-            <div className='amiibo-list-container'>
-                {!amiibosSearch && <h1>Loading...</h1>}
+                {!amiibosSearch && <><Loading /></>}
                 { amiibosSearch && amiibosSearch.map((amiibo) => {
                     return (
-                        <div className='amiibo-card' key={amiibo.tail}>
-                            <div className='img-container'>
-                                <img className='amiibo-img' alt='amiibo' src={amiibo.image} />
+                        <div class="a-box" key={amiibo.tail}>
+                        <div class="img-container">
+                          <div class="img-inner">
+                            <div class="inner-skew">
+                              <img src={amiibo.image} />
                             </div>
-                            <h3>{amiibo.name}</h3>
-                            <p>{amiibo.amiiboSeries}</p>
+                          </div>
                         </div>
+                        <div class="">
+                          <h3>{amiibo.name}</h3>
+                          <p>
+                          {amiibo.amiiboSeries}
+                        </p>
+                      </div>
+                      </div>
                     )
                 })}
-            </div>
-        </div>
+        </>
     )
 }

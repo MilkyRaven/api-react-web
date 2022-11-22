@@ -8,13 +8,13 @@ h1 {
     margin-top: 70px;
     margin-bottom: 130px;
 }
-.home-container {
+.home-cc {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 .gba {
-    width: 500px;
+    width: 400px;
 }
 .purple-btn {
     background-color: #3101FF;
@@ -26,7 +26,7 @@ h1 {
     margin-top: 20px;
 
 }
-.text-container {
+.text-cc {
     display: flex;
     flex-flow: column;
     width: 50vw;

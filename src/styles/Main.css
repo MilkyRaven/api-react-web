@@ -1,0 +1,111 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.containerX{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+p {
+    font-size: 17px;
+    font-weight: normal;
+    color: black;
+}
+
+.amiibo-list-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+}
+.amiibo-card {
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.img-container {
+    width: 100px;
+}
+.amiibo-img {
+    width: 70px;
+}
+
+/* */
+
+Main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.loading-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.sphp {
+        height: 2px;
+        background-color: black;
+}
+
+/* CARDS */
+
+.a-box {
+    display: flex;
+    flex-flow: column;
+    display: inline-block;
+    width: 240px;
+    text-align: center;
+  }
+  
+  .img-container {
+      height: 230px;
+      width: 200px;
+      overflow: hidden;
+      border-radius: 20px 20px 20px 30px;
+      display: inline-block;
+      
+  }
+  
+  .img-container img {
+    
+      transform: skew(0deg, -10deg);
+      height: 200px;
+      margin: 13px 0px 0px 0px;
+  }
+  
+  .inner-skew {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 0px;
+      transform: skew(0deg, 13deg);
+      font-size: 0px;
+      margin: 30px 0px 0px 0px;
+      background: #2303607e;
+      height: 250px;
+      width: 200px;
+  }
+  

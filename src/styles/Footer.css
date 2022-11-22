@@ -1,0 +1,63 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Path: src\styles\Header.css */
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.input {
+    border-color: #7d36f2;
+    background-color: white;
+    color:#7d36f2;
+    width: 300px;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 50px;
+    margin: 70px;
+}
+
+.sphp2 {
+    background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #7d36f2, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2vw;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+            animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+  @-webkit-keyframes reveal {
+    80% {
+      letter-spacing: 6px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @-webkit-keyframes glow {
+    40% {
+      text-shadow: 0 0 8px rgb(219, 57, 189);
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px rgb(28, 154, 204);
+    }
+
+  }

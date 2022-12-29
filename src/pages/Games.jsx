@@ -11,8 +11,10 @@ const Games = () => {
     const [amiSearch, setamiSearch] = useState();
     const [game3DS, setgame3DS] = useState();
 
+    
     const amiibo = "https://www.amiiboapi.com/api/amiibo";
     const showusage = `${amiibo}/?character=${amiSearch}&showusage`;
+    const showusage2 = `${amiibo}/?character=Zelda&showusage`
     const test = "https://www.amiiboapi.com/api/amiibo"
     const test2 = "https://www.amiiboapi.com/api/amiibo/?gameSeries=3ds"
     //const amiibotest = `amiibo/?character=zelda&showusage`;
@@ -20,11 +22,13 @@ const Games = () => {
 
     const handleSubmit = (e) => {
         const apiCall = async () => {
-            const res = await axios.get(showusage)
+            const res = await axios.get(showusage2)
             setamiSearch(res.data && res.data.amiibo)
             setAmiGameSerie(res.data.amiibo)
             setgame3DS(res.data.amiibo)
             //console.log(setamiSearch)
+            //console.log(setgame3DS)
+            console.log(game3DS)
         } 
         apiCall()
     }
@@ -32,7 +36,7 @@ const Games = () => {
    function handleSubmit2() {
         const apiCall = async () => {
             const res = await axios.get(test2)
-            setgame3DS(res.data.amiibo[0]) 
+            setgame3DS(res.data.amiibo[1].game3DS) 
         console.log(game3DS)
         }
         apiCall()
@@ -46,37 +50,39 @@ const Games = () => {
 
         <h1>Games<div className="sphp"></div></h1>
         </main>
-
-            <button className="btn" onClick={handleSubmit2}>Test API</button>
+        
+        <button className="btn" onClick={handleSubmit}> Api Test 2</button>
+        <button className="btn" onClick={handleSubmit2}>Test API</button>
 
         <div className='search-container'>
         <input type="text" placeholder="Example: Zelda, Link, Peach, Yoshi" className='input' onChange={(e) => setamiSearch(e.target.value)} />
         <button onClick={handleSubmit}>Search</button>
         </div>
         <main>
-            { !AmiGameSerie && <><h1>Search...</h1></> }
+            { !game3DS && <><h1>Search...</h1></> }
             {
-                AmiGameSerie && AmiGameSerie.map((amiibo) => {
+                game3DS && game3DS.map((games, index) => {
                     return (
-                        <div class="a-box" >
-                        <div class="img-container">
-                        <div class="img-inner">
-                        <div class="inner-skew">
-                        <img src={amiibo.image} alt={amiibo.tail} />
+                        <div className="a-box" index={index}>
+                        <div className="img-container">
+                        <div className="img-inner">
+                        <div className="inner-skew">
+                        <img src={games.image} alt={games.tail} />
                         </div>
                         </div>
                         </div>
-                        <div class="">
-                        <h3>{amiibo.gameSeries}</h3>
-                        <p>{amiibo.character}</p>
-                        {
+                        <div className="">
+                        <h3></h3>
+                        <p>{games.games3DS}</p>
+
+                        {/*
+                                                {
                             Games.map((game) => {
                                 return (
                                     <p>{game.amiiboUsage}</p>
                                 )
                             })
-                        }
-                        
+                        }*/}
                         </div>
                         </div>
                     )
